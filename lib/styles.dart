@@ -3,6 +3,7 @@ import "package:flutter/material.dart";
 class AppColors {
   static const ungu = Color(0xffCAB2F0);
   static const ungudark = Color(0xffC178ED);
+  static const ungulebihmuda = Color(0xffCAB2F0);
 }
 
 class FontCustom {
