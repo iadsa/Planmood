@@ -15,36 +15,52 @@ class DaftarPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset(
-                "assets/image/logo.png",
-                fit: BoxFit.cover,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: Image.asset("assets/image/logo.png", fit: BoxFit.cover),
               ),
-              const SizedBox(height: 50.0),
+              const SizedBox(height: 30.0),
               Container(
                 height: 600,
+                width: MediaQuery.of(context).size.width * 0.9,
                 decoration: BoxDecoration(
                   color: const Color(0xffffffff),
                   borderRadius: BorderRadius.circular(20.0),
                 ),
-                child: Align(
-                  alignment: Alignment.topCenter,
-                  child: Container(
-                    margin: const EdgeInsets.only(top: 20.0),
-                    padding: const EdgeInsets.all(10.0),
-                    decoration: BoxDecoration(
-                      color: AppColors.ungulebihmuda,
-                      borderRadius: BorderRadius.circular(20.0),
-                    ),
-                    child: const Text(
-                      "Register",
-                      style: TextStyle(
-                        fontSize: 48.0,
-                        fontFamily: "Nunito",
-                        color: Color(0xffFFFFFF),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.only(top: 20.0),
+                      padding: const EdgeInsets.all(10.0),
+                      decoration: BoxDecoration(
+                        color: AppColors.ungulebihmuda,
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      child: const Text(
+                        "Register",
+                        style: TextStyle(
+                          fontSize: 48.0,
+                          fontFamily: "Nunito",
+                          color: Color(0xffFFFFFF),
+                        ),
                       ),
                     ),
-                  ),
+                    const SizedBox(height: 60.0),
+                    const Padding(
+                      padding: EdgeInsets.only(right: 220.0),
+                      child: Text(
+                        "Daftar",
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          fontFamily: "Nunito",
+                          color: AppColors.ungulebihmuda,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
