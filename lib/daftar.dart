@@ -1,4 +1,6 @@
 import "package:flutter/material.dart";
+import 'package:planmood/login.dart';
+
 import 'styles.dart';
 
 class DaftarPage extends StatelessWidget {
@@ -23,7 +25,7 @@ class DaftarPage extends StatelessWidget {
               ),
               const SizedBox(height: 30.0),
               Container(
-                height: 600,
+                height: 650,
                 width: MediaQuery.of(context).size.width * 0.9,
                 decoration: BoxDecoration(
                   color: const Color(0xffffffff),
@@ -48,16 +50,125 @@ class DaftarPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 60.0),
+                    const SizedBox(height: 30.0), //batas atas
                     const Padding(
+                      // ngasi nama
                       padding: EdgeInsets.only(right: 220.0),
                       child: Text(
-                        "Daftar",
+                        "Nama",
                         style: TextStyle(
                           fontSize: 20.0,
                           fontFamily: "Nunito",
                           color: AppColors.ungulebihmuda,
                         ),
+                      ),
+                    ), //spasi jarak box
+                    const SizedBox(
+                      height: 10.0,
+                    ),
+                    Container(
+                      //mengatur border
+                      width: double.infinity,
+                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5.0),
+                            borderSide: const BorderSide(
+                              width: 1,
+                              color: AppColors.ungulebihmuda,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20.0), //batas atas
+                    const Padding(
+                      //untuk email box
+                      padding: EdgeInsets.only(right: 220.0),
+                      child: Text(
+                        "Email",
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          fontFamily: "Nunito",
+                          color: AppColors.ungulebihmuda,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10.0,
+                    ),
+                    Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5.0),
+                            borderSide: const BorderSide(
+                              width: 1,
+                              color: AppColors.ungulebihmuda,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20.0), //batas atas
+                    const Padding(
+                      padding: EdgeInsets.only(right: 220.0),
+                      child: Text(
+                        "Password",
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          fontFamily: "Nunito",
+                          color: AppColors.ungulebihmuda,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10.0,
+                    ),
+                    Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                      child: TextField(
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5.0),
+                            borderSide: const BorderSide(
+                              width: 1,
+                              color: AppColors.ungulebihmuda,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 60.0,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 25.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              minimumSize: const Size(150, 50),
+                              backgroundColor: const Color(0xffCAB2F0),
+                            ),
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const LoginPage()));
+                            },
+                            child: Text(
+                              "Daftar",
+                              style: FontCustom.judul,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
